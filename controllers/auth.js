@@ -40,7 +40,7 @@ const crearUsuario = async(req, res = response ) => {
         console.log(error)
         res.status(500).json({
             ok: false,
-            msg: 'Por favor hable con el administrador'
+            msg: 'Por favor fale com o administrador'
         });
     }
 }
@@ -57,7 +57,7 @@ const loginUsuario = async(req, res = response ) => {
         if ( !usuario ) {
             return res.status(400).json({
                 ok: false,
-                msg: 'El usuario no existe con ese email'
+                msg: 'Não existe usuario com esse email'
             });
         }
 
@@ -67,7 +67,7 @@ const loginUsuario = async(req, res = response ) => {
         if ( !validPassword ) {
             return res.status(400).json({
                 ok: false,
-                msg: 'Password incorrecto'
+                msg: 'Password incorreto'
             });
         }
 
@@ -86,7 +86,7 @@ const loginUsuario = async(req, res = response ) => {
         console.log(error);
         res.status(500).json({
             ok: false,
-            msg: 'Por favor hable con el administrador'
+            msg: 'Por favor fale com o administrador'
         });
     }
 
